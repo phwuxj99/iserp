@@ -1,0 +1,175 @@
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+if exists (select * from sysobjects where name='dbo.add_erpsupply')
+		drop proc dbo.add_erpsupply
+	go
+
+	create proc dbo.add_erpsupply  @p_company_code  char(35),
+	                               @p_company_name  char(150),
+					                       @p_contact       char(85),
+					                       @p_phone_number  char(65),
+					                       @p_fax_number    char(65),
+					                       @p_address       char(150),
+					                       @p_city          char(120),
+					                       @p_zipcode       char(10),
+					                       @p_country       char(65),
+					                       @p_region        char(85),
+					                       @p_email         char(85),
+					                       @p_website       char(150),
+					                       @p_notes         varchar(500),
+					                       @isvalid         char(253)    output
+	               with encryption as
+
+
+  if exists(select * from dbo.erpsupply where lower(cname_code)=lower(rtrim(@p_company_code)))
+			 begin
+			 	select @isvalid =  'Error: Double Input. Contact Admin.'
+			 	return -102
+			 end
+
+  insert dbo.erpsupply(cname,cname_code,contact,tel,fax,email,website,address,city,state,country,postcode,notes)
+            values(@p_company_name,upper(@p_company_code),@p_contact,@p_phone_number,@p_fax_number,@p_email,@p_website,
+                             @p_address,@p_city,@p_region,@p_country,@p_zipcode,@p_notes)
+		 if @@rowcount = 0
+			 begin
+			 	select @isvalid =  'Insert Error!  Contact Admin.'
+			 	return -102
+			 end
+ 
+   select @isvalid =  'Insert successfully!'
+ 
+ return 0
+ 
+ go
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+if exists (select * from sysobjects where name='update_aglclients')
+		drop proc update_aglclients
+	go
+
+	create proc update_aglclients  @p_id_num   int,
+	                       @p_cname         char(150)	,
+	                       @p_contact       char(85),
+	                       @p_discount      decimal(12,4),
+	                       @p_terms         char(35),
+	                       @p_currency      char(35),
+	                       @p_phone_number  char(65),
+	                       @p_fax_number    char(65),
+	                       @p_address       char(150),
+	                       @p_email         char(85),
+	                       @p_city          char(120),
+	                       @p_zipcode       char(20),
+	                       @p_notes         varchar(500),
+	                       @p_region        char(85),
+	                       @p_website       char(150),
+	                       @p_intel_contact char(85),
+	                       @isvalid         char(253)    output
+	               with encryption as
+
+ declare @cname char(150)
+
+ select @cname=cname from aglclient where id_num=@p_id_num
+
+ if not exists (select * from aglclient where id_num=@p_id_num)
+	 begin
+	 	select @isvalid = 'Client '+@p_cname+'.id_num does not exist.'
+	 	return -101
+	 end
+
+update aglclient set notes='' where notes is null
+
+update aglclient set cname=@p_cname,
+ 											contact=@p_contact,
+ 											tel=@p_phone_number,
+ 											fax=@p_fax_number,
+          						email=@p_email,
+          						address=@p_address,
+          						city=@p_city,
+          						state=@p_region,
+          						postcode=@p_zipcode,
+          						notes=rtrim(convert(varchar(500),@p_notes))+', '+rtrim(convert(char,getdate(),101))+'<br>'+rtrim(convert(varchar(5000),notes)),
+          						discount=@p_discount-1,
+          						rating  =@p_discount-1,
+          						terms=@p_terms,
+          						currency=@p_currency,
+          						website=@p_website,
+          						intel_contact=@p_intel_contact
+               where id_num=@p_id_num
+ if @@rowcount = 0
+	 begin
+	 	select @isvalid =  'Client '+@p_cname+' update error. Contact Admin.'
+	 	return -102
+	 end
+
+ return 0
+
+ go
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+if exists(select * from sysobjects where name='add_aglclient')
+			drop proc add_aglclient
+	go
+
+	create proc add_aglclient      @p_company_code  char(35),
+	                               @p_company_name  char(150),
+	                               @isvalid         char(250) output
+           with encryption as   
+
+  if exists(select * from aglclient where lower(cname_code)=lower(rtrim(@p_company_code)))
+			 begin
+			 	select @isvalid =  'Error: Double Input. Contact Admin.'
+			 	return -102
+			 end
+
+  insert aglclient(cname,cname_code)
+            values(@p_company_name,upper(@p_company_code))
+		 if @@rowcount = 0
+			 begin
+			 	select @isvalid =  'Insert Error!  Contact Admin.'
+			 	return -102
+			 end
+
+  return 0
+
+  go
+  
+  
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+if exists(select * from sysobjects where name='add_contact_person')
+			drop proc add_contact_person
+	go
+	
+	create proc add_contact_person @p_company_code  char(35),
+	                               @p_contact_name  char(150),
+	                               @p_gender        char(35),
+	                               @p_title         char(253),
+	                               @p_phone         char(35),
+	                               @p_fax           char(35),
+	                               @p_email         char(125),
+	                               @isvalid         char(250) output
+           with encryption as   
+  declare @company_name char(150)
+  select @company_name=cname from aglclient where cname_code=@p_company_code
+  
+  if exists(select * from contact_person where company_name=@company_name and contact_name=@p_contact_name)
+			 begin
+			 	select @isvalid =  'Error: Double Input. Contact Admin.'
+			 	return -102
+			 end
+  
+  insert contact_person(company_name,company_code,contact_name,gender,title,tel,fax,email)
+            values(@company_name,@p_company_code,@p_contact_name,@p_gender,@p_title,@p_phone,@p_fax,@p_email)
+		 if @@rowcount = 0
+			 begin
+			 	select @isvalid =  'Insert Error!  Contact Admin.'
+			 	return -102
+			 end
+
+  return 0
+  
+  go	                               
+

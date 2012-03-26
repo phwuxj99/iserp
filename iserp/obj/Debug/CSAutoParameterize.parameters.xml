@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MenuDbConnectionString-Web.config Connection String" description="MenuDbConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MenuDbConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="ApplicationServices-Web.config Connection String" description="ApplicationServices Connection String used in web.config by the application to access the database." defaultvalue="Data Source=STEPHEN-PC\SQLEXPRESS;Initial Catalog=menudb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationServices']/@connectionString" />
+  </parameter>
+  <parameter name="erpdbConnectionString-Web.config Connection String" description="erpdbConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=STEPHEN-PC\SQLEXPRESS;Initial Catalog=menudb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='erpdbConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="erpdbConnectionString1-Web.config Connection String" description="erpdbConnectionString1 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=STEPHEN-PC\SQLEXPRESS;Initial Catalog=menudb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='erpdbConnectionString1']/@connectionString" />
+  </parameter>
+  <parameter name="erpdbConnectionString2-Web.config Connection String" description="erpdbConnectionString2 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=STEPHEN-PC\SQLEXPRESS;Initial Catalog=menudb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='erpdbConnectionString2']/@connectionString" />
+  </parameter>
+  <parameter name="Entities-Web.config Connection String" description="Entities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/shared.Modeliserp.csdl|res://*/shared.Modeliserp.ssdl|res://*/shared.Modeliserp.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True;MultipleActiveResultSets=True&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\work\\WebPage\\iserp\\iserp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+</parameters>

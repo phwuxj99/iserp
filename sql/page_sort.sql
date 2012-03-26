@@ -1,0 +1,190 @@
+The stored procedure sp_GetRecipes has four input parameters and one output parameter.
+
+    * @MinRow (int input)
+    * @MaxRow (int input)
+    * @SortExpression (varchar input)
+    * @SortDirection (varchar input)
+    * @TotalRowCount (int output)
+--  get the total row count of all recipes
+SELECT @TotalRowCount = Count(RecipeId) FROM Recipe
+-- retrieve one page of recipe data
+SELECT 
+  r.RecipeId,
+  r.[Name],
+  r.Category,
+  r.ServingSize,
+  r.CreatedDate
+FROM
+(
+  SELECT 
+    ROW_NUMBER() OVER(ORDER BY 
+      CASE WHEN @SortExpression = 'Name' AND @SortDirection = 'ASC' THEN 
+        [Name] END ASC,
+      CASE WHEN @SortExpression = 'Name' AND @SortDirection = 'DESC' THEN 
+        [Name] END DESC,
+      CASE WHEN @SortExpression = 'Category' AND @SortDirection = 'ASC'  
+        THEN Category END ASC,
+      CASE WHEN @SortExpression = 'Category' AND @SortDirection = 'DESC' 
+        THEN Category END DESC,
+      CASE WHEN @SortExpression = 'ServingSize' AND @SortDirection = 'ASC'  
+        THEN ServingSize END ASC,
+      CASE WHEN @SortExpression = 'ServingSize' AND @SortDirection = 'DESC' 
+        THEN ServingSize END DESC, 
+      CASE WHEN @SortExpression = 'CreatedDate' AND @SortDirection = 'ASC'  
+        THEN CreatedDate END ASC,
+      CASE WHEN @SortExpression = 'CreatedDate' AND @SortDirection = 'DESC'  
+        THEN CreatedDate END DESC	) AS RowNumber,
+    RecipeId,
+    [Name],
+    Category,
+    ServingSize,
+    CreatedDate
+  FROM 
+    Recipe
+) AS r
+WHERE
+  r.RowNumber BETWEEN @MinRow AND @MaxRow
+  
+  
+------------------------------------------
+------------------------------------------
+ CREATE PROCEDURE [dbo].[usp_Product_GETPAGE]
+
+ (
+
+     @page int,
+
+     @pagelength int,
+
+     @sortfield varchar(100),
+
+     @descending bit,
+
+     @rowcount int output
+
+ )
+
+ AS
+
+ BEGIN
+
+     SET NOCOUNT OFF
+
+     DECLARE @Err int    
+
+     SELECT @rowcount = COUNT(*) from [Products]    
+
+     declare @innerrows int
+
+     declare @sortdesc varchar(100)
+
+     declare @sortasc varchar(100)
+
+     declare @a varchar(6)
+
+     declare @b varchar(6)
+
+     IF @descending=0
+
+             BEGIN
+
+                 set @a = ' DESC '
+
+                 set @b = ' ASC '
+
+             END
+
+     ELSE
+
+             BEGIN
+
+                 set @a = ' ASC '
+
+                 set @b = ' DESC '
+
+             END    
+
+     IF charindex(@sortfield, ' [ProductID]') > 0
+
+         BEGIN
+
+             set @sortdesc = ''
+
+             set @sortasc = ''            
+
+         END
+
+     ELSE
+
+         BEGIN
+
+             set @sortdesc = ', [ProductID] ' + @a
+
+             set @sortasc = ', [ProductID] ' + @b
+
+         END   
+
+     set @innerrows = @rowcount - (@page * @pagelength)
+
+     DECLARE @sql nvarchar(1000)
+
+     SET @sql = 'SELECT TOP ' + STR(@pagelength) + ' [ProductID], [ProductName] FROM
+
+             (
+
+                 SELECT TOP ' + STR(@innerrows) + ' [ProductID],
+
+                 [ProductName]
+
+                 FROM
+
+                 [Products] 
+
+                 ORDER BY [Products].' + @sortfield + @a + @sortdesc + ' 
+
+             ) Alias
+
+             ORDER BY Alias.' + @sortfield + @b + @sortasc    
+
+     EXEC (@sql);
+
+ END  
+ 
+ 
+ CREATE PROCEDURE dbo.GetProductsPagedAndSorted 
+ ( 
+  @sortExpression nvarchar(100),
+  @startRowIndex int, 
+  @maximumRows int 
+ ) 
+ AS 
+ -- Make sure a @sortExpression is specified 
+ IF LEN(@sortExpression) = 0 
+    SET @sortExpression = 'ProductID'
+    
+  -- Issue query 
+  DECLARE @sql nvarchar(4000)
+   SET @sql = 'SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit,
+                      UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued,
+                      CategoryName, SupplierName 
+                      FROM (SELECT ProductID, ProductName, p.SupplierID, p.CategoryID, 
+                             QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, 
+                             ReorderLevel, Discontinued, 
+                             c.CategoryName, s.CompanyName AS SupplierName, 
+                             ROW_NUMBER() OVER (ORDER BY ' + @sortExpression + ') AS RowRank 
+                      FROM Products AS p 
+                             INNER JOIN Categories AS c ON 
+                                   c.CategoryID = p.CategoryID 
+                             INNER JOIN Suppliers AS s 
+                                   ON s.SupplierID = p.SupplierID) AS ProductsWithRowNumbers 
+                      WHERE RowRank > ' + CONVERT(nvarchar(10), @startRowIndex) + 
+                             ' AND RowRank <= (' + CONVERT(nvarchar(10), @startRowIndex) + ' + ' + 
+                             CONVERT(nvarchar(10), @maximumRows) + ')' 
+  
+  -- Execute the SQL query 
+  EXEC sp_executesql @sql
+  
+  --google.ca : sql 2008 ROW_NUMBER() gridview datasource
+  --http://www.codeproject.com/KB/aspnet/GridViewSelector.aspx
+  --http://www.codeproject.com/KB/aspnet/PagingGridView.aspx?display=Print
+  --http://www.codeproject.com/script/Forums/View.aspx?fid=1004117&df=90&mpp=25&noise=3&sort=Position&view=Quick&select=2770555&fr=201

@@ -1,0 +1,38 @@
+CREATE DATABASE MenuDb
+GO
+USE MenuDb
+GO
+CREATE TABLE [Menu] (
+      [MenuID] [int] IDENTITY (1, 1) NOT NULL ,
+      [Text] [varchar] (50) COLLATESQL_Latin1_General_CP1_CI_AS NULL ,
+      [Description] [varchar] (255) COLLATESQL_Latin1_General_CP1_CI_AS NULL ,
+      [ParentID] [int] NULL ,
+      CONSTRAINT [PK_Menu] PRIMARY KEY CLUSTERED 
+      (
+            [MenuID]
+      )  ON [PRIMARY] 
+) ON [PRIMARY]
+GO
+INSERT INTO MENU
+Select 'Product','A List of Products', NULL
+UNION ALL Select 'Applications','Appliations',NULL
+UNION ALL Select 'Document','Documentation', NULL
+UNION ALL Select 'Support','Support', NULL
+UNION ALL Select 'Download','Download', NULL
+UNION ALL Select 'Background','ProductBackground', 1
+UNION ALL Select 'Details','Product Details', 1
+UNION ALL Select 'Mobile Device','Mobile DeviceApplications', 2
+UNION ALL Select 'Portal','Portal Applications',2
+UNION ALL Select 'Web Applicaitons','WebApplications', 2
+UNION ALL Select 'Demo','Demo Applicaitons', 2
+UNION ALL Select 'Performance Tests','ApplicationPerformance Tests', 2
+UNION ALL Select 'Tutorials','TutorialDocumentation', 3
+UNION ALL Select 'Programmers','ProgrammDocumentation', 3
+UNION ALL Select 'FAQ','Frequently AskedQuestions', 4
+UNION ALL Select 'Forum','Forum', 4
+UNION ALL Select 'Contact Us','Contact Us', 4
+UNION ALL Select 'InternetRestrictions','Internet Restrictions', 6
+UNION ALL Select 'Speed Solution','Speed Solutions',6
+UNION ALL Select 'Application Center Test','Application Center Test Results', 12
+UNION ALL Select 'Modem Results','Modem Results',12
+GO

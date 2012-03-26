@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MenuDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MenuDbModelStoreContainer">
+    <EntitySet Name="category" EntityType="MenuDbModel.Store.category" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="nvarchar" MaxLength="65" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" />
+    <Property Name="operator" Type="nvarchar" MaxLength="35" />
+  </EntityType>
+</Schema>

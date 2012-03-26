@@ -1,0 +1,171 @@
+﻿/* table style */
+.GridViewStyle
+{
+	font-family:lucida grande,arial,helvetica,sans-serif;
+	font-size:11px;
+	width:800px;
+	border:solid 1px #ad9e87;
+}
+
+/* common cell styles */
+.GridViewStyle th, .GridViewStyle td
+{
+	cursor:default;
+	height:20px;
+}
+
+/* header cell style */
+.GridViewStyle th
+{
+	border-right-style:solid;
+	border-right-width:1px;
+	border-right-color:#ad9e87;
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	border-bottom-color:#ad9e87;
+    background:#e1d6c7 url(../night/mt_back.gif) repeat-x;
+    color:#59483f;	
+    font-weight:bold;
+    text-align:center;    
+}  
+
+/* cell styles */
+.GridViewStyle td
+{
+    color:#000;
+	padding:2px 8px;
+	border-right-style:solid;
+	border-right-width:1px;
+    border-right-color:#f2e8da;		
+	border-bottom-style:solid;
+	border-bottom-width:1px;	
+    border-bottom-color:#f2e8da;	
+}
+
+/* mouseover row style */
+.GridViewStyle tr:hover{ background-color:#f2e8da; }
+
+.PrettyGridView .AspNet-GridView
+{
+   width: 100%;
+    
+}
+
+.PrettyGridView .AspNet-GridView div.AspNet-GridView-Pagination,
+.PrettyGridView .AspNet-GridView div.AspNet-GridView-Pagination a,
+.PrettyGridView .AspNet-GridView div.AspNet-GridView-Pagination span
+{
+    color: #00FFFF;
+    background: #284775;
+    font-weight: normal;
+    padding: 2px;
+}
+
+.PrettyGridView .AspNet-GridView table
+{
+    border: solid 1px #CCCCCC;
+    width: 100%;
+}
+
+.PrettyGridView .AspNet-GridView table thead tr th
+{
+    color: #F7F6F3;
+    background: #5D7B9D;
+    font-weight: bold;
+    border-bottom: solid 1px #CCCCCC;
+    border-right: solid 1px #CCCCCC;
+    padding: 2px;
+}
+
+.PrettyGridView .AspNet-GridView table thead tr th a
+{
+    color: #F7F6F3;
+}
+
+.PrettyGridView .AspNet-GridView table tbody tr td
+{
+    color: #333333;
+    background: White;
+    padding: 2px 20px 2px 2px;
+    border-bottom: solid 1px #CCCCCC;
+    border-right: solid 1px #CCCCCC;
+    text-align: right;
+}
+
+.PrettyGridView .AspNet-GridView table tbody tr.AspNet-GridView-Alternate td
+{
+    background: #F7F6F3;
+}
+
+.PrettyGridView .AspNet-GridView table tbody tr.AspNet-GridView-Selected td
+{
+}
+
+.PrettyGridView .AspNet-GridView table tfoot tr td
+{
+}
+
+
+.mGridTerminalRegistration
+{
+	border: solid 1px White;
+	background-color: White;
+	color: Black;
+	
+
+}
+.mGridTerminalRegistration th
+{
+	color: White;
+	background-color: Black;
+	text-decoration: none;
+}
+.mGridTerminalRegistration .altRow
+{
+	background-color: #CFD6A8;
+}
+
+.mGridTerminalRegistration .selectedRow
+{
+	background-color: #000000;
+}
+.mGridTerminalRegistration td
+{
+	padding: 3px;
+	border: solid 1px White;
+	
+}
+.mGridTerminalRegistration tr
+{
+	background-color: #BAC482;
+	
+}
+
+
+.mGrid
+{
+	border: solid 1px White;
+	background-color: White;
+	color: Black;
+}
+
+.mGrid th
+{
+	color: White;
+	background-color: Black;
+	text-decoration: none;
+}
+.mGrid .altRow
+{
+	background-color: #CFD6A8;
+}
+.mGrid td
+{
+	padding: 3px;
+	border: solid 1px White;
+}
+.mGrid tr
+{
+	background-color: #BAC482;
+	
+}

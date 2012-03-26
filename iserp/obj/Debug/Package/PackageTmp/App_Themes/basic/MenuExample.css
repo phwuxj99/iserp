@@ -1,0 +1,196 @@
+﻿body
+{
+}
+.foo
+{
+}
+/* W3C CSS validator likes CSS files to start with a class rather than a comment. Soooooo.... */
+
+/* This style sheet is intended to contain OFTEN CHANGED rules used when the Menu control adapter is enabled. */
+
+/* When the Menu control's Orientation property is Vertical the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Vertical. */
+/* Note that the example menu in this web site uses relative positioning to force the menu to occupy */
+/* a specific place in the web page.  Your web site will likely use a different technique to position your */
+/* menu.  So feel free to change all the properties found in this CSS rule if you clone this style sheet. */
+/* There is nothing, per se, that is magical about these particular property value choices.  They happen to */
+/* work well for the sample page used to demonstrate an adapted menu. */
+
+.Col4Menu
+{
+    width: 999px;
+    background-color: #0C69B7; /*#C3D9FF; /*#81B8F0;*/
+    text-align: left;
+    z-index: 150px !important;
+}
+.MenuStaticMenuItemStyle
+{
+    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 75px;
+    color: White;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #0C69B7; /* #C3D9FF;*/
+    font-family: Verdana;
+}
+.MenuStaticSelectedStyle
+{
+    /*background-color: #507CD1;    */ /*background-color: #0C69B7;*/
+}
+.MenuDynamicHoverStyle
+{
+    background-color: #284E98; /*color: White;*/
+    color: Yellow !important;
+}
+.MenuDynamicMenuStyle
+{
+    background-color:Gray /*#0C69B7 /*#F6F6F6*/ /*#C3D9FF*/ !important;
+    color: Black;
+    z-index: 150 !important;
+}
+
+
+.MenuDynamicSelectedStyle
+{
+    background-color:Gray; /*#507CD1;*/
+    color: white !important;
+}
+.MenuDynamicMenuItemStyle
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
+    color: White;
+    font-size: 12px;
+    width: 165px;
+}
+.MemnuStaticHoverStyle
+{
+    /*background-color: #284E98;*/ /*color: white;*/
+    color: Yellow !important;
+}
+
+.PrettyChangePassword
+{
+    width: 28em;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword
+{
+    font-family: Verdana;
+    font-size: 0.8em;
+    padding: 4px; 
+    border: solid 1px #284775;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword label,
+.PrettyChangePassword .AspNet-ChangePassword input
+{
+    color: #5D7B9D;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword input
+{
+    font-size: 1em;  /* lets the form element scale */
+}
+
+/* This rule is used when AutoAccessKey is true */
+.PrettyChangePassword .AspNet-ChangePassword label em
+{
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ChangePasswordTitlePanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-SuccessTitlePanel
+{
+    font-weight: bold;
+    color: #F7F6F3;
+    background: #5D7B9D;
+    text-align: center;
+    height: 1.7em;
+    margin-bottom: 0.3em;
+    padding-top: 0.4em;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-InstructionPanel
+{
+    color: #284775;
+    background: #EEEEEE;
+    padding: 1em;
+    text-align: left;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-FailurePanel
+{
+    height: 4em;
+    color: #990000;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-UserPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-PasswordPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-NewPasswordPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ConfirmNewPasswordPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-SubmitPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-CreateUserPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-PasswordRecoveryPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ContinuePanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-SuccessTextPanel
+{
+    padding: 0.25em 0.1em 0 0;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-UserPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-PasswordPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-NewPasswordPanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ConfirmNewPasswordPanel
+{
+    text-align:right;
+}
+
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-UserPanel label,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-PasswordPanel label,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-NewPasswordPanel label,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ConfirmNewPasswordPanel label,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ConfirmNewPasswordPanel span
+{
+    white-space: nowrap;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-UserPanel input,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-PasswordPanel input,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-NewPasswordPanel input,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ConfirmNewPasswordPanel input
+{
+    width: 10em;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-SubmitPanel input,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ContinuePanel input
+{
+    background: #284775;
+    color: #00FFFF;
+    border: solid 1px #5D7B9D;
+}
+
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-ContinuePanel,
+.PrettyChangePassword .AspNet-ChangePassword .AspNet-ChangePassword-SuccessTextPanel
+{
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* Specific to this sample web site. */
+/* These rules are probably not useful in your site. */
+
+#SampleChangePassword .ChangePassword-Skin-InstructionText
+{
+    text-align: left;
+    padding: 1em;
+}

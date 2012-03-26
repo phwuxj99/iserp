@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MenuDbModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="MenuDbModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id_num" ColumnName="id_num" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

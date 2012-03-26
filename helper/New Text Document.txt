@@ -1,0 +1,3 @@
+http://www.techrepublic.com/forum/questions/101-214223/how-to-convert-aspx-page-to-pdf-at-runtime
+
+http://aspdotnetcodebook.blogspot.com/2009/04/how-to-convert-web-page-to-pdf.html

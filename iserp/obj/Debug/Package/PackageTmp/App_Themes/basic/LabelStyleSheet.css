@@ -1,0 +1,208 @@
+﻿.LblPageHeader
+{
+    font-size: 16pt;
+    font-family: Arial;
+    height: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: black;
+}
+
+.LblPageTitle
+{
+    font-family: Arial;
+    vertical-align: middle;
+    font-size: 10pt;
+}
+
+.LblPageTitleDefault
+{
+    font-family: Arial;
+    vertical-align: middle;
+    font-size: 12pt;
+}
+
+.LblPageText
+{
+    font-family: Arial;
+    vertical-align: middle;
+    font-size: 10pt;
+}
+
+.Link-menu
+{
+    font-family: Arial;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+A.Link-menu:hover
+{
+    font-size: 14px;
+    color: #fbf977;
+    text-decoration: none;
+}
+.Link-menu-s
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #072a5e;
+    text-decoration: none;
+}
+A.Link-menu-s:hover
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.font-gray
+{
+    color: #7a7a7a;
+    text-align: center;
+}
+
+
+.lblSponsor
+{
+    color: #7a7a7a;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.DivMiddleImageTitle
+{
+    width: 1px;
+    height: 4em;
+    vertical-align: middle;
+}
+
+.DivMiddleImageMenu
+{
+    width: 1px;
+    height: 2em;
+    vertical-align: middle;
+}
+.DivMiddleImageCopyRight
+{
+    width: 1px;
+    height: 3em;
+    vertical-align: middle;
+}
+.lblCopyRight
+{
+    font-size: 11pt;
+}
+
+.lblFooterLink
+{
+    font-size: 12px;
+    color: #7a7a7a;
+    font-family: Arial;
+    text-decoration: none;
+}
+.FooterHRColor
+{
+    background-color: #81b8f0; /*#70a7df;*/
+    height: 7px;
+}
+.RegMainTitle
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D70000;
+}
+.RegSubTitle
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+.Regtxt
+{
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.TextIndicator_TextBox1_Strength1
+{
+     background-color:Gray;
+     color:White;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength2
+{
+     background-color:Gray;
+     color:Yellow;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength3
+{
+     background-color:Gray;
+     color: #FFCAAF;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength4
+{
+     background-color:Gray;
+     color:Aqua;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength5
+{
+     background-color:Gray;
+     color: #93FF9E;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+
+
+.LabelErrorMsg
+{
+	font-size: smaller;
+	width: 673px;
+	font-family: Arial;
+	font-size: medium;
+	color: #C00000;
+	text-align: center;
+}
+
+.LabelMsg
+{
+	font-family: Arial;
+	font-size: medium;
+	color: #009900;
+	font-weight: bold;
+}
+
+.LabelWarning
+{
+	font-size: smaller;
+	width: 673px;
+	font-family: Arial;
+	font-size: medium;
+	color: #C00000;
+	text-align: center;
+}

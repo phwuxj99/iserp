@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/iserp_deploy" />
+  <setParameter name="MenuDbConnectionString-Web.config Connection String" value="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" />
+  <setParameter name="ApplicationServices-Web.config Connection String" value="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" />
+  <setParameter name="erpdbConnectionString-Web.config Connection String" value="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" />
+  <setParameter name="erpdbConnectionString1-Web.config Connection String" value="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" />
+  <setParameter name="erpdbConnectionString2-Web.config Connection String" value="Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True" />
+  <setParameter name="Entities-Web.config Connection String" value="metadata=res://*/shared.Modeliserp.csdl|res://*/shared.Modeliserp.ssdl|res://*/shared.Modeliserp.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=STEPHEN-PC\sqlexpress;Initial Catalog=MenuDb;Integrated Security=True;MultipleActiveResultSets=True&quot;" />
+</parameters>

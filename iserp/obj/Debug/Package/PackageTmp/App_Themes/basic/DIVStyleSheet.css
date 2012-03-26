@@ -1,0 +1,420 @@
+﻿div.pageSegment
+{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+div.pageSegmentFooterlink
+{
+	background-image: url(bottom_menu_bg.jpg);
+	background-repeat: repeat;
+	width: 100%;
+	float: left;
+	text-align: center;
+	height: 20px;
+	background-color: #81b8f0; /*#70a7df;*/
+}
+div.pageSegmentFooterHR
+{
+	width: 100%;
+	float: left;
+	text-align: center;
+	height: 4px;
+	background-color: #81b8f0; /*#70a7df;*/
+}
+div.pageSegmentFooter
+{
+	background-image: url(copyright_bg.jpg);
+	background-repeat: repeat;
+	width: 100%;
+	float: left;
+	text-align: center;
+	height: 48px;
+}
+div.DivPageWidth
+{
+	width: 999px;
+	margin: 0 auto 0 auto;
+}
+div.DivIndexPageWidth
+{
+	width: 778px;
+	margin: 0 auto 0 auto;
+}
+div.DivWidthDetailsCenter
+{
+	width: 65%;
+	margin: 0 auto 0 auto;
+	text-align: center;
+}
+div.wrapper
+{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+div.DivTable
+{
+	border: 0px solid #BCCFB7;
+	width: 100%;
+}
+
+div.DivTableRow100
+{
+	float: left;
+	text-align: center;
+	/*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	padding: 2px;
+	width: 100%;
+}
+
+div.DivTableRow
+{
+	float: left;
+	text-align: center;
+	/*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	padding: 2px;
+	width: 91%;
+}
+
+
+div.DivTableRowLeft
+{
+	float: left;
+	text-align: left;
+	/*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	padding: 2px;
+	width: 72%;
+}
+
+div.DivTable2firstcolErp
+{
+	text-align: left;
+	float: left;
+	width: 20%;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	padding: 2px;
+}
+div.DivTable2secondcolErp
+{
+	text-align: left;
+	float: left;
+	width: 78%; /*height: 32px;*/
+	border-width: 0px 0px 1px 0px;
+	padding: 2px;
+}
+
+
+div.DivTable2ColHalf
+{
+	text-align: left;
+	float: left;
+	width: 49%;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	padding: 1px;
+}
+
+div.DivTable2firstcol
+{
+	text-align: right;
+	float: left;
+	width: 30%;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	padding: 2px;
+}
+div.DivTable2secondcol
+{
+	text-align: left;
+	float: left;
+	width: 68%; /*height: 32px;*/
+	border-width: 0px 0px 1px 0px;
+	padding: 2px;
+}
+
+
+div.DivTable3Col
+{
+	text-align: left;
+	float: left;
+	width: 30%;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	padding: 2px;
+}
+div.DivTable2firstcolLogin
+{
+	text-align: left;
+	float: left;
+	width: 30%;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	padding: 2px;
+	background-color: #F6F6F6;
+}
+div.DivTableColSpace
+{
+	text-align: left;
+	float: left;
+	width: 4%;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	padding: 2px;
+}
+
+div.DivTableEmail
+{
+	border: 0px solid #BCCFB7;
+	width: 76%;
+	margin-left: 15px;
+	text-align: center;
+}
+div.DivTableRowEmail
+{
+	float: left;
+	text-align: left;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	padding: 2px;
+	width: 400px;
+}
+div.DivTable2firstcolEmail
+{
+	text-align: left;
+	float: left;
+	width: 100px;
+	border-width: 0px 1px 1px 0px; /*height: 32px;*/
+	padding: 2px;
+}
+div.DivTable2secondcolEmail
+{
+	text-align: left;
+	float: left;
+	width: 380px; /*height: 32px;*/
+	border-width: 0px 0px 1px 0px;
+	padding: 2px;
+}
+div.DivTable2secondcolLeft
+{
+	text-align: left;
+	float: left;
+	width: 100%; /*height: 32px;*/
+	border-width: 0px 0px 1px 0px;
+	padding: 2px;
+}
+
+div.Div2Button
+{
+	text-align: center;
+	float: left;
+	width: 40%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	padding: 2px;
+}
+
+div.DIVFooter
+{
+	background-image: url(copyright_bg.jpg);
+	background-repeat: repeat-x;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 35px;
+	width: 900px;
+}
+
+div.DivTableMaster31
+{
+	text-align: left;
+	float: left;
+	width: 35%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	padding: 2px;
+}
+div.DivTableMaster32
+{
+	text-align: right;
+	float: left;
+	width: 35%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	padding: 2px;
+}
+div.DivTableMaster33
+{
+	text-align: left;
+	float: left;
+	width: 24%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	padding: 2px;
+}
+div.DivTableInventory31
+{
+	text-align: left;
+	float: left;
+	width: 10%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+div.DivTableInventory32
+{
+	text-align: left;
+	float: left;
+	width: 10%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+div.DivTableInventory33
+{
+	text-align: left;
+	float: left;
+	width: 78%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+
+div.DivTablePartNo1
+{
+	text-align: left;
+	float: left;
+	width: 55%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+div.DivTablePartNo2
+{
+	text-align: left;
+	float: left;
+	width: 43%;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+div.DivTablePartNo31
+{
+	text-align: center;
+	float: left;
+	width: 125px;
+	border-width: 0px 1px 1px 0px;
+	height: 32px;
+	/*padding: 2px;*/
+}
+
+div.DivTableIndex
+{
+	border: 0px solid #BCCFB7;
+	width: 100%;
+}
+
+div.DivTableRowIndex
+{
+	float: left;
+	text-align: center;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	width: 100%;
+}
+div.DivTableRowSponsor
+{
+	background-image: url(subMenu_bg.jpg);
+	background-repeat: repeat;
+	float: left;
+	text-align: center;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	border: 0px solid #BCCFB7;
+	width: 100%;
+	height: 38px;
+}
+div.DivTablefirstcolIndex
+{
+	text-align: center;
+	float: left;
+	width: 168px;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	height: 4em;
+}
+div.DivTablesecondcolIndex
+{
+	background-image: url(top_right_bg.jpg);
+	background-repeat: repeat;
+	text-align: center;
+	margin: 0;
+	float: left;
+	width: 540px; /*height: 32px;*/
+	border-width: 0px 0px 0px 0px;
+	height: 4em;
+	vertical-align: middle;
+}
+div.DivTableThirdcolIndex
+{
+	/*background-image: url(top_right_bg.jpg);*/
+	background-repeat: repeat;
+	text-align: center;
+	margin: 0;
+	float: left;
+	width: 69px; /*height: 32px;*/
+	border-width: 0px 0px 0px 0px;
+	height: 4em;
+	background-color: #F2F2F2;
+	vertical-align: middle;
+}
+div.DivTableLinkIndex
+{
+	text-align: center;
+	float: left;
+	width: 155px;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	height: 30px;
+	vertical-align: middle;
+}
+div.DivTableSpaceIndex
+{
+	text-align: center;
+	float: left;
+	width: 35px;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	height: 20px;
+}
+div.DivIndexColor
+{
+	background-color: #0c69b7;
+	width: 778px;
+}
+div.DivTableIndexSponsor
+{
+	text-align: center;
+	float: left;
+	width: 708px;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	height: 20px;
+}
+div.DivTableIndexSponsorSpace
+{
+	text-align: center;
+	float: left;
+	width: 35px;
+	border-width: 0px 0px 0px 0px; /*height: 32px;*/
+	height: 20px;
+}
+
+div.DIVIndexLine
+{
+	float: left;
+	background-image: url(line_bg1.gif);
+	background-repeat: repeat-x;
+	margin-left: 5px;
+	height: 4px;
+	width: 95%;
+}
+
+div.DIVIndexRegister
+{
+	float: left;
+	height: 35px;
+}
